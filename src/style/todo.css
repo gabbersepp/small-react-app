@@ -7,3 +7,12 @@
     margin-top: 5rem;
     padding: 1rem;
 }
+
+.todo-input > * {
+    width: calc(50% - 0.25rem);
+    margin-bottom: 0.5rem;
+}
+
+.todo-input > :first-child {
+    margin-right: 0.5rem;
+}
