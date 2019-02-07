@@ -1,0 +1,23 @@
+/* === Colors === 
+    background: #02a676
+    font: #003840
+    #005a5b
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    background-color: #025676;
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}

@@ -1,0 +1,9 @@
+#todo-list {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #005a5b;
+    box-shadow: 0 0 10px 0 white;
+    margin-top: 5rem;
+    padding: 1rem;
+}
