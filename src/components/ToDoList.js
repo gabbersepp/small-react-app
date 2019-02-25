@@ -21,7 +21,7 @@ export default class ToDoList extends Component {
         return (
             <div id="todo-list">
                 <ToDoInput input={this.input}/>
-                {this.state.todos.map(todo => (<div className="todo-entry">{todo.title}</div>))}
+                {this.state.todos.map(todo => (<div className="todo-entry" dangerouslySetInnerHTML={{__html: todo.title}}></div>))}
             </div>
         )
     }
