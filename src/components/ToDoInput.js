@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { setPreview } from "./../action/index";
+import { connect } from "react-redux";
 
-export default class ToDoInput extends Component {
+class ToDoInput extends Component {
     constructor(props) {
         super(props);
         this.value = "";
@@ -9,7 +10,7 @@ export default class ToDoInput extends Component {
 
     render() {
         return (
-            <div class="todo-input">
+            <div className="todo-input">
                 <input type="text" onChange={(e) => this.onChange(e.target.value)}/>
                 <button onClick={() => this.props.input(this.value)}>Add</button>
             </div>
@@ -18,6 +19,16 @@ export default class ToDoInput extends Component {
 
     onChange(val) {
         this.value = val;
-        this.props.store.dispatch(setPreview(val));
+        this.props.setPreviewData(val);
     }
 }
+
+const mapStateToProps = function(state) {
+    return {}
+}
+
+const mapDispatchToProps = {
+    setPreviewData: setPreview
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToDoInput);

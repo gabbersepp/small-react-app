@@ -4,6 +4,7 @@ import App from "./components/App";
 import "./style/index.css";
 import { createStore } from "redux";
 import { reduce } from "./reducer/index";
+import { Provider } from "react-redux";
 
 const e = document.getElementById("root");
 if (!e) {
@@ -15,6 +16,8 @@ if (!e) {
 let store = createStore(reduce);
 
 ReactDOM.render(
-    <App store={store}/>,
-    document.getElementById("root")
+    <Provider store={store}>
+        <App/>
+    </Provider>
+    ,document.getElementById("root")
 )

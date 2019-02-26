@@ -20,7 +20,7 @@ export default class ToDoList extends Component {
     render() {
         return (
             <div id="todo-list">
-                <ToDoInput input={this.input} store={this.props.store}/>
+                <ToDoInput input={this.input}/>
                 {this.state.todos.map(todo => (<div className="todo-entry" dangerouslySetInnerHTML={{__html: todo.title}}></div>))}
             </div>
         )
