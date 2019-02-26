@@ -1,20 +1,17 @@
 import React, { Component } from "react";
 
-let instance = null;
-
-export function setPreview(text) {
-    instance.setState({
-        text: text
-    });
-}
-
 class LivePreview extends Component {
     constructor(props) {
         super(props);
         this.state = {
             text: props.text || ""
         }
-        instance = this;
+
+        this.props.store.subscribe(() => {
+            this.setState({
+                text: this.props.store.getState().preview
+            })
+        });
     }
 
     render() {

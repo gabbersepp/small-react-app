@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { setPreview } from "./LivePreview";
+import { setPreview } from "./../action/index";
 
 export default class ToDoInput extends Component {
     constructor(props) {
@@ -18,6 +18,6 @@ export default class ToDoInput extends Component {
 
     onChange(val) {
         this.value = val;
-        setPreview(val);
+        this.props.store.dispatch(setPreview(val));
     }
 }

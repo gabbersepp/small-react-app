@@ -6,8 +6,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ToDoList/>
-                <LivePreview/>
+                <ToDoList store={this.props.store}/>
+                <LivePreview store={this.props.store}/>
             </div>
         )
     }
